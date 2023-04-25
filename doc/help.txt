@@ -1,0 +1,127 @@
+" vim: filetype=help foldmethod=marker foldmarker=<<<,>>> modifiable noreadonly
+
+Personal cheatsheet *cs*
+
+Neovim
+`L-s`     : replace the word
+`L-p`     : paste over without yanking
+`L-y`     : copy to system clipboard
+`L-Y`     : copy line to system clipboard
+
+`L-sv`    : split vertically
+`L-sh`    : split horizontal
+`L-se`    : make split windows equal width & height
+`L-sx`    : close current split window
+
+`L-to`    : open new tab
+`L-tx`    : close tab
+`L-tn`    : next tab
+`L-tp`    : previous tab
+
+`C-o`     : previous point
+`C-i`     : next point
+
+`g;`      : Jump to the next change.
+`g,`      : Jump to the previous change
+`C-r =`   : Run a command (`system("ls") | 4 + 4`) and insert the output
+
+Plugins
+nvimtree
+` <C-x>` : split
+` <C-v>` : vsplit
+` <C-t>` : tabnew
+`   bmv` : bulk_move
+`     f` : live_filter
+`     F` : clear_live_filter
+`     W` : collapse_all
+`     c` : copy
+`    gy` : copy_absolute_path
+`     y` : copy_name
+`     Y` : copy_path
+`     a` : create
+`     x` : cut
+`     p` : paste
+`     d` : remove
+`     r` : rename
+`     e` : rename_basename
+`     -` : dir_up
+`     E` : expand_all
+`     K` : first_sibling
+` <C-r>` : full_rename
+`     J` : last_sibling
+`    ]e` : next_diag_item
+`    ]c` : next_git_item
+`    [e` : prev_diag_item
+`    [c` : prev_git_item
+`     >` : next_sibling
+`     <` : prev_sibling
+`     P` : parent_node
+` <Tab>` : preview
+`     R` : refresh
+`     .` : run_file_command
+`     s` : system_open
+`     U` : toggle_custom
+`     H` : toggle_dotfiles
+` <C-k>` : toggle_file_info
+`     C` : toggle_git_clean
+`     I` : toggle_git_ignored
+`    g?` : toggle_help
+`     m` : toggle_mark
+`     B` : toggle_no_buffer
+`     D` : trash
+
+Telescope
+`L-ff`   : find files
+`L-fs`   : live grep
+`L-fc`   : grep string
+`L-fb`   : buffers
+`L-fh`   : help tags
+
+Maximizer
+`L-sm`    : toggle
+
+Undotree
+`L-u`     : toggle
+
+Gitsigns
+
+
+============================================================
+
+*tmux*
+
+New session
+`tmux new -s SESSION`
+`tns SESSION`
+
+List Sessions
+`<C-a s>`
+
+Split Horizontal
+`<C-a ->`
+
+Split Vertical
+`<C-a |>`
+
+Reload Config
+`<C-a r>`
+
+Maximize Pane
+`<C-a m>`
+
+New Window
+`<C-a c>`
+
+Navigate to Window
+`<C-a NUMBER>`
+`<C-a n>` # next
+`<C-a p>` # previous
+
+Rename Window
+`<C-a ,>`
+
+List Windows
+`<C-a w>`
+
+Switch to Copy Mode
+`<C-a [>`
