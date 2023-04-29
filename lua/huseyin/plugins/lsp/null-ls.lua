@@ -40,7 +40,7 @@ null_ls.setup({
 
 		-- php
 		null_ls.builtins.diagnostics.phpcs,
-		null_ls.builtins.formatting.phpcsfixer,
+		-- null_ls.builtins.formatting.phpcsfixer,
 
 		-- python
 		null_ls.builtins.diagnostics.flake8,

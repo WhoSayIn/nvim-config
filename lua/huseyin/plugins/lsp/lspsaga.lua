@@ -15,6 +15,13 @@ saga.setup({
 	symbol_in_winbar = {
 		enable = false,
 	},
+	lightbulb = {
+		enable = false,
+		enable_in_insert = false,
+		sign = false,
+		sign_priority = 40,
+		virtual_text = false,
+	},
 	code_action = {
 		num_shortcut = true,
 		show_server_name = true,
