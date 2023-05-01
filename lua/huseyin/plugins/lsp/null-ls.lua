@@ -13,7 +13,6 @@ null_ls.setup({
 		null_ls.builtins.completion.spell,
 
 		-- lua
-		null_ls.builtins.completion.luasnip,
 		null_ls.builtins.formatting.stylua,
 
 		-- typescript/javascript
