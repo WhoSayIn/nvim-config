@@ -46,6 +46,10 @@ null_ls.setup({
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.autopep8,
 		null_ls.builtins.formatting.black,
+
+		-- kotlin
+		null_ls.builtins.diagnostics.ktlint,
+		null_ls.builtins.formatting.ktlint,
 	},
 
 	on_attach = function(current_client, bufnr)
