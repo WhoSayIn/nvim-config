@@ -8,5 +8,5 @@ lsp_lines.setup({
 		virtual_text = false,
 	}),
 
-	vim.keymap.set("", "<Leader>dt", require("lsp_lines").toggle, { desc = "Toggle lsp_lines diagnostics" }),
+	vim.keymap.set("n", "<Leader>dt", require("lsp_lines").toggle, { desc = "Toggle lsp_lines diagnostics" }),
 })
