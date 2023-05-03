@@ -25,5 +25,6 @@ require("huseyin.plugins.vim-fugitive")
 require("huseyin.plugins.nvim-ufo")
 require("huseyin.plugins.which-key")
 require("huseyin.plugins.nvim-navbuddy")
+require("huseyin.plugins.trouble")
 
 require("huseyin.plugins.google_search")
