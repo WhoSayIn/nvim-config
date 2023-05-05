@@ -75,11 +75,10 @@ cmp.setup({
 })
 
 cmp.setup.cmdline("/", {
-	sources = cmp.config.sources({
-		{ name = "nvim_lsp_document_symbol" },
-	}, {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = {
 		{ name = "buffer" },
-	}),
+	},
 })
 
 cmp.setup.cmdline(":", {
