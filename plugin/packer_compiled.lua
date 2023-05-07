@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["code_runner.nvim"] = {
+    loaded = true,
+    path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
+    url = "https://github.com/CRAG666/code_runner.nvim"
+  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/diffview.nvim",
