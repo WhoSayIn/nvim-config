@@ -27,5 +27,6 @@ require("huseyin.plugins.which-key")
 require("huseyin.plugins.nvim-navbuddy")
 require("huseyin.plugins.trouble")
 require("huseyin.plugins.code_runner")
+require("huseyin.plugins.toggleterm")
 
 require("huseyin.plugins.google_search")

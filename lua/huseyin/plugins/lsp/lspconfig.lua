@@ -129,6 +129,7 @@ lspconfig["intelephense"].setup({
 				"ctype",
 				"SimpleXML",
 				"Reflection",
+				"PDO",
 			},
 		},
 	},

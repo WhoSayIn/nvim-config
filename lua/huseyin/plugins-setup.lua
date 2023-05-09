@@ -119,6 +119,10 @@ return packer.startup(function(use)
 	})
 
 	use("CRAG666/code_runner.nvim")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

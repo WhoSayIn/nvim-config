@@ -7,4 +7,4 @@ trouble.setup({})
 
 local k = vim.keymap
 
-k.set("n", "<leader>tt", ":TroubleToggle<cr>")
+--k.set("n", "<leader>tt", ":TroubleToggle<cr>")
