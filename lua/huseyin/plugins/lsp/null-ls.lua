@@ -10,7 +10,6 @@ null_ls.setup({
 		null_ls.builtins.code_actions.gitsigns,
 		null_ls.builtins.code_actions.refactoring,
 		null_ls.builtins.code_actions.shellcheck,
-		null_ls.builtins.completion.spell,
 
 		-- lua
 		null_ls.builtins.formatting.stylua,
