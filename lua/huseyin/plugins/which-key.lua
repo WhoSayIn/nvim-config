@@ -1,6 +1,6 @@
 local status, which_key = pcall(require, "which-key")
 if not status then
-	return
+  return
 end
 
 vim.o.timeout = true

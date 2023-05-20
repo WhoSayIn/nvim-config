@@ -1,6 +1,6 @@
 local status, signature = pcall(require, "lsp_signature")
 if not status then
-	return
+  return
 end
 
 signature.setup()

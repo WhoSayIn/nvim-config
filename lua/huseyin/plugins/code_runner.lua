@@ -1,13 +1,13 @@
 local setup, code_runner = pcall(require, "code_runner")
 if not setup then
-	return
+  return
 end
 
 code_runner.setup({
-	mode = "float",
-	float = {
-		border = "rounded",
-	},
+  mode = "float",
+  float = {
+    border = "rounded",
+  },
 })
 
 local k = vim.keymap

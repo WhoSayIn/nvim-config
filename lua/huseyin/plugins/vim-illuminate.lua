@@ -1,10 +1,10 @@
 local status, illuminate = pcall(require, "illuminate")
 if not status then
-	return
+  return
 end
 
 illuminate.configure({
-	filetypes_denylist = {
-		"NvimTree",
-	},
+  filetypes_denylist = {
+    "NvimTree",
+  },
 })

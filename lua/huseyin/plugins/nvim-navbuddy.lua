@@ -1,15 +1,15 @@
 local status, navbuddy = pcall(require, "nvim-navbuddy")
 if not status then
-	return
+  return
 end
 
 navbuddy.setup({
-	window = {
-		border = "rounded",
-	},
-	lsp = {
-		auto_attach = true,
-	},
+  window = {
+    border = "rounded",
+  },
+  lsp = {
+    auto_attach = true,
+  },
 })
 
 local k = vim.keymap

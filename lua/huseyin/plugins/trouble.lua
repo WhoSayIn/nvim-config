@@ -1,6 +1,6 @@
 local status, trouble = pcall(require, "trouble")
 if not status then
-	return
+  return
 end
 
 trouble.setup({})

@@ -1,6 +1,6 @@
 local status, ufo = pcall(require, "ufo")
 if not status then
-	return
+  return
 end
 
 -- Using ufo provider need remapping `zR` and `zM`
@@ -14,7 +14,7 @@ vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 ufo.setup({
-	provider_selector = function(bufnr, filetype, buftype)
-		return { "treesitter", "indent" }
-	end,
+  provider_selector = function(bufnr, filetype, buftype)
+    return { "treesitter", "indent" }
+  end,
 })
