@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["cmp-under-comparator"] = {
+    loaded = true,
+    path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/cmp-under-comparator",
+    url = "https://github.com/lukas-reineke/cmp-under-comparator"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",

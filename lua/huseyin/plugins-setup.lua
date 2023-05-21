@@ -124,6 +124,7 @@ return packer.startup(function(use)
     tag = "*",
   })
   use("j-hui/fidget.nvim")
+  use("lukas-reineke/cmp-under-comparator")
 
   if packer_bootstrap then
     require("packer").sync()
