@@ -45,10 +45,13 @@ return packer.startup(function(use)
   use("RRethy/vim-illuminate")
 
   -- autocomplete
-  use("hrsh7th/nvim-cmp")   -- completion plugin
-  use("hrsh7th/cmp-buffer") -- source for text in buffer
-  use("hrsh7th/cmp-path")   -- source for file system paths
-  use("hrsh7th/cmp-cmdline") -- source for file system paths
+  use("hrsh7th/nvim-cmp")    -- completion plugin
+  use("hrsh7th/cmp-buffer")  -- source for text in buffer
+  use("hrsh7th/cmp-path")    -- source for file system paths
+  use("hrsh7th/cmp-cmdline") -- source for commandline
+  use("hrsh7th/cmp-nvim-lua") -- source for file system paths
+  use("hrsh7th/cmp-nvim-lsp")
+  use("lukas-reineke/cmp-under-comparator")
 
   -- snippets
   use("L3MON4D3/LuaSnip")            -- snippet engine
@@ -61,7 +64,6 @@ return packer.startup(function(use)
 
   -- configure lsp servers
   use("neovim/nvim-lspconfig")
-  use("hrsh7th/cmp-nvim-lsp")
   use({ "glepnir/lspsaga.nvim", branch = "main" })
   use("jose-elias-alvarez/typescript.nvim")
   use("onsails/lspkind.nvim")
@@ -125,7 +127,6 @@ return packer.startup(function(use)
     tag = "*",
   })
   use("j-hui/fidget.nvim")
-  use("lukas-reineke/cmp-under-comparator")
 
   if packer_bootstrap then
     require("packer").sync()
