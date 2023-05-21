@@ -123,6 +123,7 @@ return packer.startup(function(use)
     "akinsho/toggleterm.nvim",
     tag = "*",
   })
+  use("j-hui/fidget.nvim")
 
   if packer_bootstrap then
     require("packer").sync()
