@@ -4,3 +4,8 @@ autocmd("BufWritePost", {
   pattern = "*.prisma",
   command = "make prisma-format",
 })
+
+autocmd("BufWritePost", {
+  pattern = "resume.md",
+  command = "make generate-pdf",
+})
