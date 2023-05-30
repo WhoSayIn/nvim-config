@@ -135,6 +135,12 @@ return packer.startup(function(use)
       "MunifTanjim/nui.nvim",
     },
   })
+  use({
+    "chrishrb/gx.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  })
 
   if packer_bootstrap then
     require("packer").sync()
