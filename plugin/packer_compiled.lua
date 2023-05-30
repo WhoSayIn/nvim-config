@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["laravel.nvim"] = {
+    loaded = true,
+    path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/laravel.nvim",
+    url = "https://github.com/adalessa/laravel.nvim"
+  },
   ["lsp_lines.nvim"] = {
     loaded = true,
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
@@ -320,6 +325,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-dotenv"] = {
+    loaded = true,
+    path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/vim-dotenv",
+    url = "https://github.com/tpope/vim-dotenv"
   },
   ["vim-fugitive"] = {
     loaded = true,

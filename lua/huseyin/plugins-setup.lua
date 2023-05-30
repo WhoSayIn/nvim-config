@@ -127,6 +127,14 @@ return packer.startup(function(use)
     tag = "*",
   })
   use("j-hui/fidget.nvim")
+  use({
+    "adalessa/laravel.nvim",
+    requires = {
+      "nvim-telescope/telescope.nvim",
+      "tpope/vim-dotenv",
+      "MunifTanjim/nui.nvim",
+    },
+  })
 
   if packer_bootstrap then
     require("packer").sync()
