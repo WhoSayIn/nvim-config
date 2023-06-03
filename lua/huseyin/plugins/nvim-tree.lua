@@ -6,10 +6,10 @@ end
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
-local function on_attach(bufnr)
-  local api = require("nvim-tree.api")
-  local k = vim.keymap
+local k = vim.keymap
+local api = require("nvim-tree.api")
 
+local function on_attach(bufnr)
   local function opts(desc)
     return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
@@ -39,8 +39,6 @@ local function on_attach(bufnr)
   k.set("n", "C", api.tree.change_root_to_node, opts("CD"))
   k.set("n", "Z", api.node.run.system, opts("Run System"))
   k.set("n", "ga", git_add, opts("git add"))
-  k.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
-  k.set("n", "<leader>cf", ":NvimTreeFindFile<CR>", { desc = "Focus on open file in NvimTree" })
 
   -- to look good with Solarized theme
   vim.cmd("hi NvimTreeNormal guibg=#001f2f")
@@ -72,7 +70,6 @@ nvimtree.setup({
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
   callback = function()
-    local api = require("nvim-tree.api")
     if #vim.api.nvim_list_wins() == 1 and api.tree.is_tree_buf() then
       vim.defer_fn(function()
         api.tree.toggle({ find_file = true, focus = true })
@@ -82,3 +79,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
+
+k.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+k.set("n", "<leader>cf", ":NvimTreeFindFile<CR>", { desc = "Focus on open file in NvimTree" })
