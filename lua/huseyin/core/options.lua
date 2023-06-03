@@ -1,7 +1,6 @@
 local o = vim.opt
 
 -- line numbers
-o.relativenumber = true
 o.number = true
 
 -- tabs & indentation
@@ -42,4 +41,4 @@ o.splitright = true
 o.splitbelow = true
 
 o.updatetime = 300
--- o.iskeyword:append("-")
+o.confirm = true

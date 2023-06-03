@@ -21,6 +21,7 @@ k.set("x", "<leader>p", '"_dP', { desc = "paste over something without copying d
 k.set("n", "<leader>y", '"+y', { desc = "yank into system clipboard" })
 k.set("v", "<leader>y", '"+y', { desc = "yank into system clipboard" })
 k.set("n", "<leader>Y", '"+Y', { desc = "yank into system clipboard" })
+k.set("v", "y", "ygv<ESC>", { desc = "yank, but not move the cursor back" })
 
 -- window management
 k.set("n", "<leader>sv", "<C-w>v", { desc = "split window vertically" })
