@@ -52,7 +52,7 @@ end
 nvimtree.setup({
   on_attach = on_attach,
   filters = {
-    custom = { "^.git$" },
+    custom = { "^.git$", "__pycache__", ".pytest_cache" },
   },
   git = {
     ignore = false,
