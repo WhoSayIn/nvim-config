@@ -44,30 +44,15 @@ return packer.startup(function(use)
   use("lukas-reineke/indent-blankline.nvim")
   use("RRethy/vim-illuminate")
 
-  -- autocomplete
-  use("hrsh7th/nvim-cmp")    -- completion plugin
-  use("hrsh7th/cmp-buffer")  -- source for text in buffer
-  use("hrsh7th/cmp-path")    -- source for file system paths
-  use("hrsh7th/cmp-cmdline") -- source for commandline
-  use("hrsh7th/cmp-nvim-lua") -- source for file system paths
-  use("hrsh7th/cmp-nvim-lsp")
-  use("lukas-reineke/cmp-under-comparator")
-
-  -- snippets
-  use("L3MON4D3/LuaSnip")            -- snippet engine
-  use("saadparwaiz1/cmp_luasnip")    -- for autocompletion
-  use("rafamadriz/friendly-snippets") -- useful snippets
-
-  -- manage lsp servers
+  -- lsp
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
-
-  -- configure lsp servers
   use("neovim/nvim-lspconfig")
   use({ "glepnir/lspsaga.nvim", branch = "main" })
   use("jose-elias-alvarez/typescript.nvim")
   use("onsails/lspkind.nvim")
   use("ray-x/lsp_signature.nvim")
+  use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
   use({
     "SmiteshP/nvim-navbuddy",
     requires = {
@@ -76,6 +61,20 @@ return packer.startup(function(use)
       "MunifTanjim/nui.nvim",
     },
   })
+
+  -- autocomplete
+  use("hrsh7th/nvim-cmp")   -- completion plugin
+  use("hrsh7th/cmp-buffer") -- source for text in buffer
+  use("hrsh7th/cmp-path")   -- source for file system paths
+  use("hrsh7th/cmp-cmdline") -- source for commandline
+  use("hrsh7th/cmp-nvim-lua")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("lukas-reineke/cmp-under-comparator")
+
+  -- snippets
+  use("L3MON4D3/LuaSnip")            -- snippet engine
+  use("saadparwaiz1/cmp_luasnip")    -- for autocompletion
+  use("rafamadriz/friendly-snippets") -- useful snippets
 
   -- formatting & linting
   use("jose-elias-alvarez/null-ls.nvim")
@@ -106,11 +105,10 @@ return packer.startup(function(use)
   use("lewis6991/gitsigns.nvim")
   use("sindrets/diffview.nvim")
   use("tpope/vim-rhubarb") -- for GBrowse of vim-fugitive to work
+
   use("folke/which-key.nvim")
   use("MunifTanjim/nui.nvim")
   use("dpayne/CodeGPT.nvim")
-  use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
-  -- use("Maan2003/lsp_lines.nvim")
 
   use({
     "kevinhwang91/nvim-ufo",
@@ -126,15 +124,7 @@ return packer.startup(function(use)
     "akinsho/toggleterm.nvim",
     tag = "*",
   })
-  use("j-hui/fidget.nvim")
-  use({
-    "adalessa/laravel.nvim",
-    requires = {
-      "nvim-telescope/telescope.nvim",
-      "tpope/vim-dotenv",
-      "MunifTanjim/nui.nvim",
-    },
-  })
+  use({ "j-hui/fidget.nvim", tag = "legacy" })
   use({
     "chrishrb/gx.nvim",
     requires = {

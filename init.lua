@@ -29,7 +29,6 @@ require("huseyin.plugins.trouble")
 require("huseyin.plugins.code_runner")
 require("huseyin.plugins.toggleterm")
 require("huseyin.plugins.fidget")
-require("huseyin.plugins.laravel")
 require("huseyin.plugins.gx")
 
 require("huseyin.plugins.google_search")
