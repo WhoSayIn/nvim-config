@@ -25,6 +25,7 @@ mason_lspconfig.setup({
     "elixirls",
     "intelephense",
     "kotlin_language_server",
+    "solargraph",
   },
   automatic_installation = true,
 })

@@ -40,6 +40,7 @@ treesitter.setup({
     "python",
     "regex",
     "rst",
+    "ruby",
     "sql",
     "tsx",
     "twig",
