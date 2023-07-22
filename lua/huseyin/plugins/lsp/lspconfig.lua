@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
   k.set(
     "n",
     "gf",
-    "<cmd>Lspsaga lsp_finder<CR>",
+    "<cmd>Lspsaga finder<CR>",
     opts,
     { desc = "Lspsaga: show definition, references, implementations, usages" }
   )

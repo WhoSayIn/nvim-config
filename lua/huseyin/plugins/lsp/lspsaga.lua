@@ -6,7 +6,9 @@ end
 saga.setup({
   scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
   definition = {
-    edit = "<CR>",
+    keys = {
+      edit = "<CR>",
+    },
   },
   ui = {
     title = true,
