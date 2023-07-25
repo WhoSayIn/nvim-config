@@ -82,6 +82,9 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
+capabilities["general"] = {
+  positionEncodings = "utf-16"
+}
 
 lspconfig["html"].setup({
   capabilities = capabilities,
