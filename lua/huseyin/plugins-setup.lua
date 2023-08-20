@@ -109,6 +109,7 @@ return packer.startup(function(use)
   use("folke/which-key.nvim")
   use("MunifTanjim/nui.nvim")
   use("dpayne/CodeGPT.nvim")
+  use({ "weizheheng/ror.nvim", requires = "stevearc/dressing.nvim" })
 
   use({
     "kevinhwang91/nvim-ufo",

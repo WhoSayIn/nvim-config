@@ -30,5 +30,6 @@ require("huseyin.plugins.code_runner")
 require("huseyin.plugins.toggleterm")
 require("huseyin.plugins.fidget")
 require("huseyin.plugins.gx")
+require("huseyin.plugins.ror")
 
 require("huseyin.plugins.google_search")

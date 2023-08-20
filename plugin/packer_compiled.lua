@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/fidget.nvim",
@@ -295,6 +300,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
+  ["ror.nvim"] = {
+    loaded = true,
+    path = "/home/huseyin/.local/share/nvim/site/pack/packer/start/ror.nvim",
+    url = "https://github.com/weizheheng/ror.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

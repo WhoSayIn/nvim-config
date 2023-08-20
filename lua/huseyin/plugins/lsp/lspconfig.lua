@@ -83,7 +83,7 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 capabilities["general"] = {
-  positionEncodings = "utf-16"
+  positionEncodings = "utf-16",
 }
 
 lspconfig["html"].setup({
@@ -159,6 +159,16 @@ lspconfig["kotlin_language_server"].setup({
 lspconfig["solargraph"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
+  flags = {
+    debounce_text_changes = 50,
+  },
+  settings = {
+    solargraph = {
+      formatting = true,
+      useBundler = true,
+      diagnostics = true,
+    },
+  },
 })
 
 local _border = "single"

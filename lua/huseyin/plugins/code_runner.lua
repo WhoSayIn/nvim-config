@@ -8,6 +8,9 @@ code_runner.setup({
   float = {
     border = "rounded",
   },
+  filetype = {
+    ruby = "ruby",
+  },
 })
 
 local k = vim.keymap
