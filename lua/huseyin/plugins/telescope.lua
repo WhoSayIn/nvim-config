@@ -21,12 +21,13 @@ telescope.setup({
 })
 
 telescope.load_extension("fzf")
+telescope.load_extension("live_grep_args")
 
 local k = vim.keymap
 
 k.set("n", "<leader>ff", ":Telescope find_files<cr>")
 k.set("n", "<leader>fe", ":Telescope oldfiles cwd_only=true<cr>")
-k.set("n", "<leader>fs", ":Telescope live_grep<cr>")
+k.set("n", "<leader>fs", ":Telescope live_grep_args<cr>")
 k.set("n", "<leader>fc", ":Telescope commands<cr>")
 k.set("n", "<leader>fg", ":Telescope grep_string<cr>")
 k.set("n", "<leader>fb", ":Telescope buffers<cr>")

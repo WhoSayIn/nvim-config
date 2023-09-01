@@ -164,9 +164,16 @@ lspconfig["solargraph"].setup({
   },
   settings = {
     solargraph = {
-      formatting = true,
       useBundler = true,
-      diagnostics = true,
+      diagnostic = true,
+      completion = true,
+      hover = true,
+      formatting = true,
+      symbols = true,
+      definitions = true,
+      rename = true,
+      references = true,
+      folding = true,
     },
   },
 })

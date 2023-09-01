@@ -37,8 +37,13 @@ return packer.startup(function(use)
   use("nvim-tree/nvim-tree.lua")
   use("kyazdani42/nvim-web-devicons")
   use("nvim-lualine/lualine.nvim")
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+  use({
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+      { "nvim-telescope/telescope-fzf-native.nvim",    run = "make" },
+    },
+  })
   use("mbbill/undotree")
   use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
   use("lukas-reineke/indent-blankline.nvim")
@@ -125,13 +130,14 @@ return packer.startup(function(use)
     "akinsho/toggleterm.nvim",
     tag = "*",
   })
-  use({ "j-hui/fidget.nvim", tag = "legacy" })
   use({
     "chrishrb/gx.nvim",
     requires = {
       "nvim-lua/plenary.nvim",
     },
   })
+
+  use("cappyzawa/starlark.vim")
 
   if packer_bootstrap then
     require("packer").sync()
