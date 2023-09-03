@@ -1,18 +1,17 @@
-local setup, code_runner = pcall(require, "code_runner")
-if not setup then
-  return
-end
-
-code_runner.setup({
-  mode = "float",
-  float = {
-    border = "rounded",
+return {
+  "CRAG666/code_runner.nvim",
+  opts = {
+    mode = "float",
+    float = {
+      border = "rounded",
+    },
+    filetype = {
+      ruby = "ruby",
+    },
   },
-  filetype = {
-    ruby = "ruby",
-  },
-})
+  config = function()
+    local k = vim.keymap
 
-local k = vim.keymap
-
-k.set("n", "<leader>rr", ":RunCode<cr>")
+    k.set("n", "<leader>rr", ":RunCode<cr>")
+  end,
+}
