@@ -1,70 +1,94 @@
-local setup, null_ls = pcall(require, "null-ls")
-if not setup then
-  return
-end
+return {
+	"jose-elias-alvarez/null-ls.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	config = function()
+		local null_ls = require("null-ls")
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+		local null_ls_utils = require("null-ls.utils")
 
-null_ls.setup({
-  sources = {
-    null_ls.builtins.code_actions.gitsigns,
-    null_ls.builtins.code_actions.refactoring,
-    null_ls.builtins.code_actions.shellcheck,
+		local formatting = null_ls.builtins.formatting
+		local diagnostics = null_ls.builtins.diagnostics
+		local code_actions = null_ls.builtins.code_actions
 
-    -- lua
-    null_ls.builtins.formatting.stylua,
+		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-    -- typescript/javascript
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.diagnostics.tsc,
-    null_ls.builtins.formatting.eslint_d.with({
-      condition = function(utils)
-        return utils.root_has_file(".eslintrc.js")
-      end,
-    }),
+		null_ls.setup({
+			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
+			sources = {
+				code_actions.gitsigns,
+				code_actions.refactoring,
+				code_actions.shellcheck,
 
-    null_ls.builtins.code_actions.eslint_d.with({
-      condition = function(utils)
-        return utils.root_has_file(".eslintrc.js")
-      end,
-    }),
-    null_ls.builtins.diagnostics.eslint_d.with({
-      condition = function(utils)
-        return utils.root_has_file(".eslintrc.js")
-      end,
-    }),
+				-- lua
+				formatting.stylua,
 
-    require("typescript.extensions.null-ls.code-actions"),
+				-- typescript/javascript
+				formatting.prettier,
+				diagnostics.tsc,
+				formatting.eslint_d.with({
+					condition = function(utils)
+						return utils.root_has_file(".eslintrc.js")
+					end,
+				}),
 
-    -- php
-    null_ls.builtins.diagnostics.phpcs,
-    null_ls.builtins.formatting.phpcsfixer,
+				code_actions.eslint_d.with({
+					condition = function(utils)
+						return utils.root_has_file(".eslintrc.js")
+					end,
+				}),
+				diagnostics.eslint_d.with({
+					condition = function(utils)
+						return utils.root_has_file(".eslintrc.js")
+					end,
+				}),
 
-    -- python
-    null_ls.builtins.formatting.black,
+				require("typescript.extensions.null-ls.code-actions"),
 
-    null_ls.builtins.diagnostics.flake8.with({
-      prefer_local = ".venv/bin",
-    }),
-    null_ls.builtins.formatting.isort,
+				-- python
+				formatting.black,
 
-    -- kotlin
-    null_ls.builtins.diagnostics.ktlint,
-    null_ls.builtins.formatting.ktlint,
-  },
-  on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = augroup,
-        buffer = bufnr,
-        callback = function()
-          vim.lsp.buf.format({
-            bufnr = bufnr,
-            -- name = "null-ls",
-          })
-        end,
-      })
-    end
-  end,
-})
+				diagnostics.flake8.with({
+					prefer_local = ".venv/bin",
+				}),
+				formatting.isort,
+
+				-- kotlin
+				diagnostics.ktlint,
+				formatting.ktlint,
+			},
+			-- configure format on save
+			-- on_attach = function(client, bufnr)
+			--   if client.supports_method("textDocument/formatting") then
+			--     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			--     vim.api.nvim_create_autocmd("BufWritePre", {
+			--       group = augroup,
+			--       buffer = bufnr,
+			--       callback = function()
+			--         vim.lsp.buf.format({
+			--           bufnr = bufnr,
+			--           -- name = "null-ls",
+			--         })
+			--       end,
+			--     })
+			--   end
+			-- end,
+			on_attach = function(current_client, bufnr)
+				if current_client.supports_method("textDocument/formatting") then
+					vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+					vim.api.nvim_create_autocmd("BufWritePre", {
+						group = augroup,
+						buffer = bufnr,
+						callback = function()
+							vim.lsp.buf.format({
+								filter = function(client)
+									return client.name == "null-ls"
+								end,
+								bufnr = bufnr,
+							})
+						end,
+					})
+				end
+			end,
+		})
+	end,
+}
