@@ -5,11 +5,9 @@ return {
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status")
 
-		local theme = require("lualine.themes.solarized")
-
 		lualine.setup({
 			options = {
-				theme = theme,
+				theme = "auto",
 				globalstatus = true,
 			},
 			sections = {
