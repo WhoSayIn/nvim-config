@@ -15,6 +15,22 @@ return {
 		-- change color for arrows in tree to light blue
 		-- vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
+		function Grep_at_current_tree_node()
+			local node = require("nvim-tree.lib").get_node_at_cursor()
+			if not node then
+				return
+			end
+			require("telescope.builtin").live_grep({ search_dirs = { node.absolute_path } })
+		end
+
+		function Find_at_current_tree_node()
+			local node = require("nvim-tree.lib").get_node_at_cursor()
+			if not node then
+				return
+			end
+			require("telescope.builtin").find_files({ search_dirs = { node.absolute_path } })
+		end
+
 		local function on_attach(bufnr)
 			local function opts(desc)
 				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
@@ -45,6 +61,8 @@ return {
 			k.set("n", "C", api.tree.change_root_to_node, opts("CD"))
 			k.set("n", "Z", api.node.run.system, opts("Run System"))
 			k.set("n", "ga", git_add, opts("git add"))
+			k.set("n", "<space>fs", ":lua Grep_at_current_tree_node()<CR>", opts("git add"))
+			k.set("n", "<space>ff", ":lua Find_at_current_tree_node()<CR>", opts("git add"))
 
 			-- to look good with Solarized theme
 			vim.cmd("hi NvimTreeNormal guibg=#001f2f")
