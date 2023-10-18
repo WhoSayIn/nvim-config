@@ -5,12 +5,12 @@ local k = vim.keymap
 -- general
 k.set("i", "jj", "<ESC>")
 k.set("n", "<F4>", ":nohl<CR>")
-k.set("n", "x", '"_x')              -- x should delete but not copy
+k.set("n", "x", '"_x') -- x should delete but not copy
 
 k.set("v", "J", ":m '>+1<CR>gv=gv") -- move selected lines up and down
 k.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected lines up and down
 
-k.set("n", "J", "mzJ`z")            -- J merges next line but keeps the cursor where it is
+k.set("n", "J", "mzJ`z") -- J merges next line but keeps the cursor where it is
 k.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "replace the word I'm on" })
 
 k.set("n", "<leader>bd", ":Bdelete<CR>", { desc = "Close buffer" })
