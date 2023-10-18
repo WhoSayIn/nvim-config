@@ -13,7 +13,7 @@ k.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected lines up and down
 k.set("n", "J", "mzJ`z")            -- J merges next line but keeps the cursor where it is
 k.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "replace the word I'm on" })
 
-k.set("n", "<leader>bd", ":bd<CR>", { desc = "Close buffer" })
+k.set("n", "<leader>bd", ":Bdelete<CR>", { desc = "Close buffer" })
 k.set("n", "<leader>bo", ":%bd|e#<CR>", { desc = "Close all buffers but the current one" })
 
 -- clipboard

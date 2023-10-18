@@ -5,6 +5,7 @@ return {
     build = ":TSUpdate",
     dependencies = {
       "windwp/nvim-ts-autotag",
+      "nvim-treesitter/nvim-treesitter-textobjects",
     },
     config = function()
       local treesitter = require("nvim-treesitter.configs")
@@ -25,7 +26,6 @@ return {
           },
         },
         ensure_installed = {
-
           "bash",
           "comment",
           "css",
