@@ -6,16 +6,24 @@ return {
     "olimorris/neotest-rspec",
   },
   config = function()
-    require("neotest").setup({
+    local neotest = require("neotest")
+    neotest.setup({
       adapters = {
         require("neotest-rspec"),
       },
     })
 
-
     local k = vim.keymap
 
-    k.set("n", "<leader>tr", ":Neotest run<cr>")
-    k.set("n", "<leader>ts", ":Neotest summary<cr>")
+    k.set("n", "<leader>tr", neotest.run.run)
+    k.set("n", "<leader>tf", function()
+      neotest.run.run(vim.fn.expand("%"))
+    end)
+    k.set("n", "<leader>ts", function()
+      neotest.summary.toggle()
+    end)
+    k.set("n", "<leader>to", function()
+      neotest.output.open()
+    end)
   end,
 }
