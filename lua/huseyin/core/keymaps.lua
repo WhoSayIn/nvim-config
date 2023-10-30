@@ -29,11 +29,6 @@ k.set("n", "<leader>sh", "<C-w>s", { desc = "split window horizontally" })
 k.set("n", "<leader>se", "<C-w>=", { desc = "make split windows equal width & height" })
 k.set("n", "<leader>sx", ":close<CR>", { desc = "close current split window" })
 
-k.set("n", "<leader>to", ":tabnew<CR>", { desc = "open new tab" })
-k.set("n", "<leader>tx", ":tabclose<CR>", { desc = "close current tab" })
-k.set("n", "<leader>tn", ":tabn<CR>", { desc = "go to next tab" })
-k.set("n", "<leader>tp", ":tabp<CR>", { desc = "go to previous tab" })
-
 -- plugin keymaps
 k.set("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "Maximize" })
 k.set("n", "<leader>u", ":UndotreeToggle<CR>")
