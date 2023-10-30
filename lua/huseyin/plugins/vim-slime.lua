@@ -1,3 +1,4 @@
+-- Sends selected text as a command to the last tmux pane
 return {
   "jpalardy/vim-slime",
   config = function()
