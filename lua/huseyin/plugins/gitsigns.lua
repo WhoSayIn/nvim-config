@@ -80,7 +80,6 @@ return {
       map("n", "<leader>hD", function()
         gs.diffthis("~")
       end)
-      map("n", "<leader>td", gs.toggle_deleted, { desc = "Toggle git deleted" })
 
       -- Text object
       map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
