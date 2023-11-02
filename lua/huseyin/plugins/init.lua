@@ -5,7 +5,6 @@ return {
   "inkarkat/vim-ReplaceWithRegister",
   "tpope/vim-surround",
   "mbbill/undotree",
-  "lukas-reineke/indent-blankline.nvim",
   "jose-elias-alvarez/typescript.nvim",
   "onsails/lspkind.nvim",
   "ray-x/lsp_signature.nvim",
