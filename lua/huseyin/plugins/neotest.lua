@@ -15,15 +15,15 @@ return {
 
     local k = vim.keymap
 
-    k.set("n", "<leader>tr", neotest.run.run)
+    k.set("n", "<leader>tr", neotest.run.run, { desc = "Test: Run closest" })
     k.set("n", "<leader>tf", function()
       neotest.run.run(vim.fn.expand("%"))
-    end)
+    end, { desc = "Test: Run whole file" })
     k.set("n", "<leader>ts", function()
       neotest.summary.toggle()
-    end)
+    end, { desc = "Test: Show summary" })
     k.set("n", "<leader>to", function()
       neotest.output.open()
-    end)
+    end, { desc = "Test: Show output" })
   end,
 }
