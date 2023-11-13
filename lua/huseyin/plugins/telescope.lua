@@ -39,6 +39,9 @@ return {
     k.set("n", "<leader>fh", ":Telescope help_tags<cr>")
     k.set("n", "<leader>fk", ":Telescope keymaps<cr>")
     k.set("n", "<leader>fa", ":Telescope builtin<cr>")
+    k.set("n", "<leader>fl", ":Telescope current_buffer_fuzzy_find<cr>")
+    k.set("n", "<leader>/", ":Telescope search_history<cr>")
+    k.set("n", "<leader>:", ":Telescope command_history<cr>")
     k.set("n", ";", ":Telescope resume<cr>")
   end,
 }
