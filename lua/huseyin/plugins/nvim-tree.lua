@@ -90,6 +90,9 @@ return {
       git = {
         ignore = false,
       },
+      renderer = {
+        indent_markers = { enable = true },
+      },
     })
 
     -- prevent focusing on nvimtree full screen after a :bdelete
