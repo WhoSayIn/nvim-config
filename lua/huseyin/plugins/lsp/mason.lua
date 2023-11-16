@@ -29,7 +29,6 @@ return {
         "pylsp",
         "elixirls",
         "kotlin_language_server",
-        "solargraph",
         "graphql",
       },
       automatic_installation = true,
