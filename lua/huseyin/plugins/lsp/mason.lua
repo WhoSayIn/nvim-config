@@ -23,13 +23,15 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-        "tsserver",
+        "cssls",
+        "elixirls",
+        "emmet_ls",
+        "graphql",
         "html",
+        "kotlin_language_server",
         "lua_ls",
         "pylsp",
-        "elixirls",
-        "kotlin_language_server",
-        "graphql",
+        "tsserver",
       },
       automatic_installation = true,
     })

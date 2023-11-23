@@ -43,5 +43,7 @@ return {
     k.set("n", "<leader>/", ":Telescope search_history<cr>")
     k.set("n", "<leader>:", ":Telescope command_history<cr>")
     k.set("n", ";", ":Telescope resume<cr>")
+
+    require("huseyin.private.telescope.picker.repository")
   end,
 }
