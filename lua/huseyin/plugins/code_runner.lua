@@ -9,9 +9,7 @@ return {
       ruby = "ruby",
     },
   },
-  config = function()
-    local k = vim.keymap
-
-    k.set("n", "<leader>rr", ":RunCode<cr>")
-  end,
+  keys = {
+    { "<leader>rr", ":RunCode<cr>", desc = "Run code" },
+  },
 }
