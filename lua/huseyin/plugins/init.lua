@@ -26,10 +26,4 @@ return {
   "dpayne/CodeGPT.nvim",
   "cappyzawa/starlark.vim",
   "famiu/bufdelete.nvim",
-  {
-  "j-hui/fidget.nvim",
-  opts = {
-    -- options
-  },
-}
 }
