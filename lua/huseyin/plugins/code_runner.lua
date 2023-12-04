@@ -7,6 +7,7 @@ return {
     },
     filetype = {
       ruby = "ruby",
+      python = "python3",
     },
   },
   keys = {
