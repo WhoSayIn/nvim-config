@@ -5,6 +5,7 @@ return {
       imap <silent><script><expr> <M-CR> copilot#Accept("\<CR>")
       let g:copilot_no_tab_map = v:true
       let g:copilot_enabled = v:true
+      let g:copilot_filetypes = {'yaml': v:true}
       ]])
   end,
 }
