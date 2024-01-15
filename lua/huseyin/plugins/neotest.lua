@@ -25,5 +25,8 @@ return {
     k.set("n", "<leader>to", function()
       neotest.output.open()
     end, { desc = "Test: Show output" })
+    k.set("n", "<leader>tp", function()
+      neotest.output_panel.open()
+    end, { desc = "Test: Show output in a panel" })
   end,
 }
