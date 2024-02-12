@@ -10,6 +10,8 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
+    local lga_actions = require("telescope-live-grep-args.actions")
+    local lga_shortcuts = require("telescope-live-grep-args.shortcuts")
 
     telescope.setup({
       defaults = {
@@ -19,6 +21,16 @@ return {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+          },
+        },
+      },
+      extensions = {
+        live_grep_args = {
+          auto_quoting = true,
+          mappings = {
+            i = {
+              ["<C-g>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+            },
           },
         },
       },
@@ -33,6 +45,7 @@ return {
     k.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
     k.set("n", "<leader>fe", "<cmd>Telescope oldfiles cwd_only=true<cr>")
     k.set("n", "<leader>fs", "<cmd>Telescope live_grep_args<cr>")
+    k.set("v", "<leader>fs", lga_shortcuts.grep_visual_selection)
     k.set("n", "<leader>fc", "<cmd>Telescope commands<cr>")
     k.set("v", "<leader>fc", "<cmd>Telescope git_bcommits_range<cr>")
     k.set("n", "<leader>fg", "<cmd>Telescope grep_string<cr>")
