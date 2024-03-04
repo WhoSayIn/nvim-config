@@ -66,7 +66,7 @@ return {
       end, { desc = "Bufferline switch tabs in reverse" })
 
       k.set("n", "<leader>br", ":BufferLineMoveNext<cr>", { desc = "Bufferline move right" })
-      k.set("n", "<leader>bp", ":BufferLineMovePrev<cr>", { desc = "Bufferline move left" })
+      k.set("n", "<leader>bl", ":BufferLineMovePrev<cr>", { desc = "Bufferline move left" })
     end,
   },
 }
