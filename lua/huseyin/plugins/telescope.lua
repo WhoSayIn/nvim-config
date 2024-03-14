@@ -54,7 +54,7 @@ return {
     k.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>")
     k.set("n", "<leader>fa", "<cmd>Telescope builtin<cr>")
     k.set("n", "<leader>fr", "<cmd>Telescope git_branches<cr>")
-    k.set("n", "<leader>fl", "<cmd>Telescope current_buffer_fuzzy_find<cr>")
+    k.set("n", "<leader>fl", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>")
     k.set("n", "<leader>/", "<cmd>Telescope search_history<cr>")
     k.set("n", "<leader>:", "<cmd>Telescope command_history<cr>")
     k.set("n", ";", "<cmd>Telescope resume<cr>")
