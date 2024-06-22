@@ -64,9 +64,6 @@ return {
       k.set("n", "<space>fs", ":lua Grep_at_current_tree_node()<CR>", opts("git add"))
       k.set("n", "<space>ff", ":lua Find_at_current_tree_node()<CR>", opts("git add"))
 
-      -- to look good with Solarized theme
-      vim.cmd("hi NvimTreeNormal guibg=#001f2f")
-
       -- open the file you just created
       api.events.subscribe(api.events.Event.FileCreated, function(file)
         vim.cmd("edit " .. file.fname)
