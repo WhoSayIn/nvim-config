@@ -31,7 +31,7 @@ return {
         "kotlin_language_server",
         "lua_ls",
         "pylsp",
-        "tsserver",
+        "ts_ls",
       },
       automatic_installation = true,
     })

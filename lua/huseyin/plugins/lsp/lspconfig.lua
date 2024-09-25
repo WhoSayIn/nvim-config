@@ -72,7 +72,7 @@ return {
       k.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts, { desc = "Lspsaga: see outline on right hand side" })
 
       -- typescript specific keymaps (e.g. rename file and update imports)
-      if client.name == "tsserver" then
+      if client.name == "ts_ls" then
         k.set("n", "<leader>rf", ":TypescriptRenameFile<CR>", { desc = "rename file and update imports" })
         k.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>", { desc = "organize imports" })
         k.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>", { desc = "remove unused variables" })
@@ -95,7 +95,7 @@ return {
       on_attach = on_attach,
     })
 
-    lspconfig["tsserver"].setup({
+    lspconfig["ts_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
