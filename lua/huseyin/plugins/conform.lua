@@ -23,17 +23,15 @@ return {
         sh = { "shfmt" },
       },
       format_on_save = {
-        lsp_fallback = true,
-        async = true,
-        timeout_ms = 5000,
+        timeout_ms = 2000,
+        lsp_format = "fallback",
       },
     })
 
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()
       conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1000,
+        timeout_ms = 2000,
+        lsp_format = "fallback",
       })
     end, { desc = "Format file or range (in visual mode)" })
   end,
