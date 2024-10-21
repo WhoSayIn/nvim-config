@@ -19,3 +19,9 @@ autocmd("BufWritePost", {
   pattern = "kitty.conf",
   command = "silent !kill -SIGUSR1 $(pgrep -a kitty)",
 })
+
+autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
