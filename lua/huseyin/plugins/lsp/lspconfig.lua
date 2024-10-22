@@ -135,27 +135,20 @@ return {
       on_attach = on_attach,
     })
 
-    lspconfig["solargraph"].setup({
+    lspconfig["ruby_lsp"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 50,
-      },
       settings = {
-        solargraph = {
-          useBundler = true,
-          diagnostic = true,
-          completion = true,
-          hover = true,
-          formatting = true,
-          symbols = true,
-          definitions = true,
-          rename = true,
-          references = true,
-          folding = true,
+        rubyLsp = {
+          featuresConfiguration = {
+            inlayHint = {
+              enableAll = true,
+            },
+          },
         },
       },
     })
+
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
