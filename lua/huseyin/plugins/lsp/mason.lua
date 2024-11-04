@@ -29,8 +29,6 @@ return {
         "lua_ls",
         "pylsp",
         "ts_ls",
-        "ruby_lsp",
-        "rubocop",
       },
       automatic_installation = true,
     })
