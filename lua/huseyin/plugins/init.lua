@@ -23,7 +23,6 @@ return {
     },
   },
   "MunifTanjim/nui.nvim",
-  "dpayne/CodeGPT.nvim",
   "cappyzawa/starlark.vim",
   "famiu/bufdelete.nvim",
 }
