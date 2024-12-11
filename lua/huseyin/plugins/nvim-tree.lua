@@ -16,7 +16,7 @@ return {
     -- vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
     function Grep_at_current_tree_node()
-      local node = require("nvim-tree.lib").get_node_at_cursor()
+      local node = api.tree.get_node_under_cursor()
       if not node then
         return
       end
@@ -24,7 +24,7 @@ return {
     end
 
     function Find_at_current_tree_node()
-      local node = require("nvim-tree.lib").get_node_at_cursor()
+      local node = api.tree.get_node_under_cursor()
       if not node then
         return
       end
