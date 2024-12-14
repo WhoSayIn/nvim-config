@@ -7,13 +7,6 @@ return {
   "jose-elias-alvarez/typescript.nvim",
   "onsails/lspkind.nvim",
   "ray-x/lsp_signature.nvim",
-  {
-    "ThePrimeagen/refactoring.nvim",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-treesitter/nvim-treesitter" },
-    },
-  },
   "sindrets/diffview.nvim",
   {
     "tpope/vim-rhubarb", -- for GBrowse of vim-fugitive to work}
