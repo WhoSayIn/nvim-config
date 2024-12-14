@@ -29,7 +29,3 @@ k.set("n", "<leader>sv", "<C-w>v", { desc = "split window vertically" })
 k.set("n", "<leader>sh", "<C-w>s", { desc = "split window horizontally" })
 k.set("n", "<leader>se", "<C-w>=", { desc = "make split windows equal width & height" })
 k.set("n", "<leader>sx", ":close<CR>", { desc = "close current split window" })
-
--- plugin keymaps
-k.set("n", "<leader>u", ":UndotreeToggle<CR>")
-k.set("v", "<leader>sg", ":<C-U>GoogleSearch<CR>")

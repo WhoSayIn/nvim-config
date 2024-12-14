@@ -3,7 +3,6 @@ return {
   "christoomey/vim-tmux-navigator",
   "inkarkat/vim-ReplaceWithRegister",
   "tpope/vim-surround",
-  "mbbill/undotree",
   "jose-elias-alvarez/typescript.nvim",
   "onsails/lspkind.nvim",
   "ray-x/lsp_signature.nvim",
