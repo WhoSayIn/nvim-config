@@ -1,7 +1,6 @@
 return {
   "nvim-lua/plenary.nvim",
   "christoomey/vim-tmux-navigator",
-  "szw/vim-maximizer",
   "inkarkat/vim-ReplaceWithRegister",
   "tpope/vim-surround",
   "mbbill/undotree",

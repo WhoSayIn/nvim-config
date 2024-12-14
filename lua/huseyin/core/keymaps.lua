@@ -31,6 +31,5 @@ k.set("n", "<leader>se", "<C-w>=", { desc = "make split windows equal width & he
 k.set("n", "<leader>sx", ":close<CR>", { desc = "close current split window" })
 
 -- plugin keymaps
-k.set("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "Maximize" })
 k.set("n", "<leader>u", ":UndotreeToggle<CR>")
 k.set("v", "<leader>sg", ":<C-U>GoogleSearch<CR>")
