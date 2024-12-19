@@ -7,7 +7,7 @@ return {
     },
     filetype = {
       ruby = "ruby",
-      python = "python3",
+      python = "time python3",
     },
   },
   keys = {
