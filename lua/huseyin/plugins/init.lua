@@ -15,5 +15,4 @@ return {
   },
   "MunifTanjim/nui.nvim",
   "cappyzawa/starlark.vim",
-  "famiu/bufdelete.nvim",
 }
