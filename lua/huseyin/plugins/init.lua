@@ -7,12 +7,6 @@ return {
   "onsails/lspkind.nvim",
   "ray-x/lsp_signature.nvim",
   "sindrets/diffview.nvim",
-  {
-    "tpope/vim-rhubarb", -- for GBrowse of vim-fugitive to work}
-    dependencies = {
-      { "tpope/vim-fugitive" },
-    },
-  },
   "MunifTanjim/nui.nvim",
   "cappyzawa/starlark.vim",
 }

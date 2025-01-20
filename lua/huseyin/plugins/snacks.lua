@@ -43,7 +43,7 @@ return {
       function()
         Snacks.gitbrowse()
       end,
-      desc = "Open file on github/gitlab/bitbucket",
+      desc = "Browse file on github/gitlab/bitbucket",
     },
   },
 }
