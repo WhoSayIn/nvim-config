@@ -16,6 +16,7 @@ return {
     k.set("n", "<leader>gci", ":G commit<cr>", { desc = "Git commit" })
     k.set("n", "<leader>gcm", ":G checkout master<cr>", { desc = "Git checkout master" })
     k.set("n", "<leader>gco", ":G checkout<Space>", { desc = "Git checkout" })
+    k.set("n", "<leader>gct", ":G checkout -b hk/cnl-", { desc = "New task branch" })
     k.set("n", "<leader>gbb", ":G blame<cr>", { desc = "Git blame" })
     k.set("n", "<leader>gd", ":G diff<cr>", { desc = "Git diff" })
     k.set("n", "<leader>grm", ":G rebase master<cr>", { desc = "Git rebase master" })
