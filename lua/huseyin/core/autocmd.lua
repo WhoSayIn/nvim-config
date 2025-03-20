@@ -54,6 +54,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "gitsigns-blame",
     "fugitiveblame",
     "crunner",
+    "git",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
