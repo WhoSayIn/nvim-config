@@ -11,7 +11,7 @@ k.set("v", "J", ":m '>+1<CR>gv=gv") -- move selected lines up and down
 k.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected lines up and down
 
 k.set("n", "J", "mzJ`z") -- J merges next line but keeps the cursor where it is
-k.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "replace the word I'm on" })
+k.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "replace the word I'm on" })
 
 -- clipboard
 k.set("x", "<leader>p", '"_dP', { desc = "paste over something without copying deleted text" })
